@@ -2394,7 +2394,7 @@ class MeanTensor(Metric):
   m.update_state([0, 1, 2, 3])
   m.update_state([4, 5, 6, 7])
   print('Result: ', m.result().numpy())  # Result: [2, 3, 4, 5]
-  m.update_state([12, 10, 8, 6], sample_weights= [0, 0.2, 0.5, 1])
+  m.update_state([12, 10, 8, 6], sample_weight=[0, 0.2, 0.5, 1])
   print('Result: ', m.result().numpy())  # Result: [2, 3.636, 4.8, 5.333]
   ```
   """
